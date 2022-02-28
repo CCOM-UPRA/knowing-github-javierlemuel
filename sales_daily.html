@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reporte Daily DAILY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_logo/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script>
+   
+  <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 100px;">
+      <div class="container-fluid">
+          <img style="height: 150px; width: 150px;"src="img/dragonfly_logo.png">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="home_admin.php">Home
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product_admin.html">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sales_daily.html">Reports</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="users.html">Users</a>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-right;" style="padding-right: 30px;">
+            <form class="d-flex" style="height: 40px; padding-top: 5px;"> 
+              <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-lg"></i></a>
+                <div class="dropdown-menu" style="left: -15px">
+                  <a class="dropdown-item" href="AdminPage.php">Account Info</a>
+                  <a class="dropdown-item" href="home.php">Sign Out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <ul class="nav nav-tabs">
+     
+      <li class="nav-item" style="padding-top:5px">
+        <button class="tablinks change btn btn-outline-danger" onclick="window.location.href='sales_daily.html'">Daily</button>
+      </li>
+      <li class="nav-item" style="padding-top:5px">
+        <button class="tablinks change btn btn-outline-danger" onclick="window.location.href='sales_weekly.html'">Weekly</button>
+      </li>
+      <li class="nav-item" style="padding-top:5px">
+        <button class="tablinks change btn btn-outline-danger" onclick="window.location.href='sales_monthly.html'">Monthly</button>
+      </li>
+    
+     
+      <li class="nav-item dropdown">
+        <a style="color: black; margin-top: 5px; " 
+        class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Reports</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <a class="dropdown-item" href="#"><b>Sales Report</b></a>
+          <a class="dropdown-item" href="single_daily.html">Autel Robotics: EVO Quad II</a>
+          <a class="dropdown-item" href="single_daily.html">DJI Mini SE</a>
+          <a class="dropdown-item" href="single_daily.html">Lozenge Drone</a>
+          <a class="dropdown-item" href="single_daily.html">DEERC Drone</a>
+          <a class="dropdown-item" href="single_daily.html">DEERC Drone</a>
+          <a class="dropdown-item" href="sales_daily.html">All Drones</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="all_products.html"><b>Inventory: All Drones</b></a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="container mt-5">
+      <h1 class="myDIV" style="width: 100%; text-align: center; color: black; font-size: 32px; text-shadow: gray"> Inventory Daily Sales</h1>
+
+    <table id="example" class="table table-striped" style="width: 100%; color: black;">
+    
+    </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
+
+      <script>
+        $(document).ready(function () {
+          $("#example").DataTable();
+        });
+      </script>
+
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>ID</th>
+          <th>Orders</th>
+          <th>Products</th>
+          <th>Total</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+          
+        <tr style="color: darkgrey;">
+          <td style="color: darkgrey;"><input type="checkbox"> 01/01/2022</td>
+          <td style="color: darkgrey;">5874</td>
+          <td style="color: darkgrey;">34</td>
+          <td style="color: darkgrey;">108</td>
+          <td style="color: darkgrey;">$21,293.00</td>
+        </tr>
+
+        
+        <tr style="color: darkgrey;">
+          <td style="color: darkgrey;"><input type="checkbox"> 02/01/2022</td>
+          <td style="color: darkgrey;">5874</td>
+          <td style="color: darkgrey;">45</td>
+          <td style="color: darkgrey;">87</td>
+          <td style="color: darkgrey;">$24,000.000</td>
+        </tr> 
+
+        <tr style="color: darkgrey;">
+            <td style="color: darkgrey;"><input type="checkbox"> 03/01/2022</td>
+            <td style="color: darkgrey;">5874</td>
+            <td style="color: darkgrey;">31</td>
+            <td style="color: darkgrey;">105</td>
+            <td style="color: darkgrey;">$36,820.01</td>
+          </tr> 
+
+          <tr style="color: darkgrey;">
+            <td style="color: darkgrey;"><input type="checkbox"> 04/01/2022</td>
+            <td style="color: darkgrey;">5874</td>
+            <td style="color: darkgrey;">67</td>
+            <td style="color: darkgrey;">67</td>
+            <td style="color: darkgrey;">$32,392.01</td>
+          </tr> 
+
+          <tr style="color: darkgrey;">
+            <td style="color: darkgrey;"><input type="checkbox"> 05/01/2022</td>
+            <td style="color: darkgrey;">5874</td>
+            <td style="color: darkgrey;">32</td>
+            <td style="color: darkgrey;">54</td>
+            <td style="color: darkgrey;">$56,703.30</td>
+          </tr> 
+
+          <tr style="color: darkgrey;">
+            <td style="color: darkgrey;"><input type="checkbox"> 06/01/2022</td>
+            <td style="color: darkgrey;">5874</td>
+            <td style="color: darkgrey;">25</td>
+            <td style="color: darkgrey;">32</td>
+            <td style="color: darkgrey;">$35,800.00</td>
+          </tr> 
+
+
+      </tbody>
+      <tfoot>
+        <tr>
+         <th></th>
+          <th></th>
+          <th></th>
+          <th style="text-align: right;">Total: </th>
+          <th>$207,008.32</th>
+          
+        </tr>
+      </tfoot>
+    </table>
+    <button style="margin: 0px 45%;" class="btn btn-success">Make Report</button>
+  </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar-brand{
+    font-size: 2rem;
+    color: white;
+}
+.navbar-brand:hover{
+    color: white;
+}
+.nav-link{
+    margin-right: 10px;
+    margin-left: 10px;
+    color: white;
+    text-transform: uppercase;
+}
+.nav-link:hover{
+    color:white; 
+}
+.main{
+    height: 120vh;
+    width: 100%;
+}
+.main h1 { 
+    font-size: 4rem;
+    font-weight: 700; 
+}
+.fa-shopping-cart{
+    width:30px;
+    height:30px;
+}
+
+.main .container-fluid{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+    padding-bottom: 0;
+}
+.footer-dark {
+    padding:50px 0;
+    color:#f0f9ff;
+    background-color:#282d32;
+    height: 15px;
+}
+.footer-dark .copyright {
+    text-align:center;
+    padding-top:10px;
+    opacity:0.3;
+    font-size:13px;
+    margin-bottom:0;
+}
+.navbar-brand{
+    padding-left: 20px;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.image1 {
+    height: 200px;
+    width: 300px;
+}
+.best-selling{
+    margin-top: 10px;
+    padding-top: 0;
+}
+.card-text1{
+    font-size: large;
+    color: #0f2537; 
+    margin: 0;
+    padding-top: 0;
+}
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -150%) scale(0);
+    width: 400px;
+    height: 470px;
+    z-index: 2;
+    padding: 40px 30px 50px 30px;
+    border: 10px;
+    border-radius: 0;
+    border-color: #2c2c2c;
+    outline:#222222;
+    background: white;
+    z-index: 1;
+    box-shadow: 5px 5px 10px #262626, -5px -5px 10px #262626;
+  }
+.popup2 .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -150%) scale(0);
+    width: 450px;
+    height: 640px;
+    z-index: 2;
+    padding: 40px 30px 50px 30px;
+    border: 10px;
+    border-radius: 0;
+    border-color: #2c2c2c;
+    outline:#222222;
+    background: white;
+    z-index: 1;
+    box-shadow: 5px 5px 10px #262626, -5px -5px 10px #262626;
+  }
+.popup .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    color: black;
+    font-size: 30px;
+    border-radius: 0;
+    padding: 2px 5px 7px 5px;
+    background: white;
+  }
+.popup2 .close-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    color: black;
+    font-size: 30px;
+    border-radius: 0;
+    padding: 2px 5px 7px 5px;
+    background: white;
+  }
+
+  .close-btn:hover{
+    cursor: pointer;
+  }
+  
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+.popup2.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+.input-field .validate {
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 0;
+    border: 2px;
+    margin-bottom: 15px;
+    color: black;
+    background: white;
+}
+
+.first-button {
+    height: 100%;
+    width: 120px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.su-button{
+    padding: 0;
+    margin: 0;
+    color: rgb(50, 180, 255);
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.first-button:active {
+    background: linear-gradient(145deg, #222222, #292929);
+    border: none;
+}
+
+  .second-button {
+    align-self: center;
+    width: 50%;
+    color: white;
+    background: #0f2537;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 20px;
+    padding: 20px 50px 20px 50px;
+    border-radius: 0;
+    border: none;
+    outline: none;
+  }
+
+  .second-button:active {
+    background: linear-gradient(145deg, #222222, #292929);
+    border: none;
+    outline: none;
+  }
+.box1 {
+    border: 10px;
+    border-color: #0f2537;
+    height: 20px;
+    width: 200px;
+}
+.card-header {
+    background-color: #e0e0e08f;
+}
+.card-footer {
+    background-color: #e0e0e08f; 
+    height: 130px;
+}
+.font1 {
+    font-weight: lighter;
+}
+.ptitle {
+    margin: 0;
+    padding: 0;
+}
+.badge1 {
+    align-content: center;
+    justify-content: center;
+}
+.dropdown-item2 {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #343a40;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+  }
+.dataTables_filter {
+    display: none;
+    }
+.dataTables_length {
+        display: none;
+    }
+.input-group-append {
+    max-width: 100%;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #f5f7fa;
+}

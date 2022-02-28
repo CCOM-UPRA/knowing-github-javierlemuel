@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_logo/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 100px;">
+        <div class="container-fluid">
+            <img style="height: 150px; width: 150px;"src="img/dragonfly_logo.png">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="home_admin.php">Home
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product_admin.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sales_daily.html">Reports</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="users.html">Users</a>
+              </li>
+            </ul>
+            <div class="d-flex justify-content-right;" style="padding-right: 30px;">
+              <form class="d-flex" style="height: 40px; padding-top: 5px;"> 
+                <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+              </form>
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-lg"></i></a>
+                  <div class="dropdown-menu" style="left: -15px">
+                    <a class="dropdown-item" href="AdminPage.php">Account Info</a>
+                    <a class="dropdown-item" href="home.php">Sign Out</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+  
+    <div class="container">
+        <div class="row g-4 align-items-center" style="padding: 20px;">
+            <div class="col">
+                <h2 class="h3 m-0">Products</h1>
+            </div>
+            <div class="col-auto d-flex">
+                <a href="./add_product.html" class="btn btn-info">New product</a>
+            </div>
+        </div>
+    </div>
+    <div class="mx-xxl-3 px-4 px-sm-5 pb-6">
+        <div class="sa-layout">
+            <div class="p-4" style="background-color: white;">
+                <div class="row g-4">
+                    <div class="col">
+                        <form class="d-flex" style="height: 40px; padding-top: 5px;"> 
+                            <input type="text" placeholder="Search for products" class="form-control form-control--search mx-auto" id="table-search">
+                            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <table id="example" class="table table-hover">
+                <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+                <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+                <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
+
+                <script>
+                    $(document).ready(function () {
+                    $("#example").DataTable();
+                     });
+                </script>
+                <thead style="height: 50px; font-size: large;">
+                    <tr role="row">
+                        <th class="min-w-20x sorting sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Product: activate to sort column descending" style="width: 200px; padding-left: 20px;" aria-sort="ascending">Product</th>
+                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Stock: activate to sort column ascending" style="width: 100px;">ID</th>
+                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Stock: activate to sort column ascending" style="width: 100px;">Stock</th>
+                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending" style="width: 100px;">Price</th>
+                        <th class="w-min sorting_disabled" data-orderable="false" rowspan="1" colspan="1" aria-label="" style="width: 25px;"></th>
+                    </tr>
+                </thead>
+                <tbody style="width: 100%">
+                <tr>
+                    <td scope="row" style="width: 30px;">
+                        <div class="d-flex align-items-center" style="padding-left: 30px;">
+                            <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                <img src="./img/3.jpg" width="40" height="40" alt="">
+                            </div>
+                            <div style="padding-left: 15px;">
+                                <p title="Edit Product" onclick="window.location.href='edit_product.html'" style="cursor:pointer" onMouseOver="this.style.color='#424f5c'"
+                                onMouseOut="this.style.color='#4e5d6c'" class="ptitle">Lozenge Drone</p>
+                        </div>
+                        </div>
+                    </td>
+                    <td>4402</td>
+                    <td class="sorting_1"><span class="badge bg-danger">Out of Stock</span></td>
+                    <td>$39.99</td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-sa-muted btn-sm" type="button" id="product-context-menu-11" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="4" height="13" fill="#343a40">
+                                    <path d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z"></path>
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="product-context-menu-11" style="background-color: white;">
+                                <li><a class="dropdown-item text-dark" href="#">Edit</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Duplicate</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Add tag</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Remove tag</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row" style="width: 30px;">
+                        <div class="d-flex align-items-center" style="padding-left: 30px;">
+                            <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                <img src="./img/2.jpg" width="40" height="40" alt="">
+                            </div>
+                            <div style="padding-left: 15px;">
+                                <p title="Edit Product" onclick="window.location.href='edit_product.html'" style="cursor:pointer" onMouseOver="this.style.color='#424f5c'"
+                                onMouseOut="this.style.color='#4e5d6c'" class="ptitle">DEERC Drone</p>
+                        </div>
+                        </div>
+                    </td>
+                    <td>4152</td>
+                    <td class="sorting_1"><span class="badge bg-success">3 in Stock</span></td>
+                    <td><div class="sa-price">
+                        <span class="sa-price__symbol">$</span>
+                        <span class="sa-price__integer">82</span>
+                        <span class="sa-price__decimal">.44</span>
+                    </div>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-sa-muted btn-sm" type="button" id="product-context-menu-11" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="4" height="13" fill="#343a40">
+                                    <path d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z"></path>
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="product-context-menu-11" style="background-color: white;">
+                                <li><a class="dropdown-item text-dark" href="#">Edit</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Duplicate</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Add tag</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Remove tag</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr><tr>
+                    <td  scope="row" style="width: 30px;">
+                        <div class="d-flex align-items-center" style="padding-left: 30px;">
+                            <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                <img src="./img/1.PNG" width="40" height="40" alt="">
+                            </div>
+                            <div style="padding-left: 15px;">
+                                <p title="Edit Product" onclick="window.location.href='edit_product.html'" style="cursor:pointer" onMouseOver="this.style.color='#424f5c'"
+                                onMouseOut="this.style.color='#4e5d6c'" class="ptitle">DJI Mini SE</p>
+                             
+                        </div>
+                        </div>
+                    </td>
+                    <td>3698</td>
+                    <td class="sorting_1"><span class="badge bg-success">7 in Stock</span></td>                    
+                    <td><div class="sa-price">
+                        <span class="sa-price__symbol">$</span>
+                        <span class="sa-price__integer">299</span>
+                        <span class="sa-price__decimal">.99</span>
+                    </div>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-sa-muted btn-sm" type="button" id="product-context-menu-11" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="4" height="13" fill="#343a40">
+                                    <path d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z"></path>
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="product-context-menu-11" style="background-color: white;">
+                                <li><a class="dropdown-item text-dark" href="#">Edit</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Duplicate</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Add tag</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Remove tag</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row" style="width: 30px;">
+                        <div class="d-flex align-items-center" style="padding-left: 30px;">
+                            <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                <img src="product-images/autel_robotics_evo_quadcopter_ii.png" width="40" height="40" alt="">
+                            </div>
+                            <div style="padding-left: 15px;">
+                                <p title="Edit Product" onclick="window.location.href='edit_product.html'" style="cursor:pointer" onMouseOver="this.style.color='#424f5c'"
+                                onMouseOut="this.style.color='#4e5d6c'" class="ptitle">Autel Robotics: EVO Quadcopter II</p>
+                        </div>
+                        </div>
+                    </td>
+                    <td>8521</td>
+                    <td class="sorting_1"><span class="badge bg-success">4 in Stock</span></td>
+                    <td><div class="sa-price">
+                        <span class="sa-price__symbol">$</span>
+                        <span class="sa-price__integer">1,249</span>
+                        <span class="sa-price__decimal">.00</span>
+                    </div>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-sa-muted btn-sm" type="button" id="product-context-menu-11" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="4" height="13" fill="#343a40">
+                                    <path d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z"></path>
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="product-context-menu-11" style="background-color: white;">
+                                <li><a class="dropdown-item text-dark" href="#">Edit</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Duplicate</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Add tag</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Remove tag</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row" style="width: 30px;">
+                        <div class="d-flex align-items-center" style="padding-left: 30px;">
+                            <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                <img src="product-images/dji_tello.jpg" width="40" height="40" alt="">
+                            </div>
+                            <div style="padding-left: 15px;">
+                                <p title="Edit Product" onclick="window.location.href='edit_product.html'" style="cursor:pointer" onMouseOver="this.style.color='#424f5c'"
+                                onMouseOut="this.style.color='#4e5d6c'" class="ptitle">DJI: Tello</p>
+                        </div>
+                        </div>
+                    </td>
+                    <td>5874</td>
+                    <td class="sorting_1"><span class="badge bg-warning">1 in Stock</span></td>
+                    <td><div class="sa-price">
+                        <span class="sa-price__symbol">$</span>
+                        <span class="sa-price__integer">39</span>
+                        <span class="sa-price__decimal">.99</span>
+                    </div>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-sa-muted btn-sm" type="button" id="product-context-menu-11" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="4" height="13" fill="#343a40">
+                                    <path d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z"></path>
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="product-context-menu-11" style="background-color: white;">
+                                <li><a class="dropdown-item text-dark" href="#">Edit</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Duplicate</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Add tag</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Remove tag</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table> 
+        </div>
+    </div>
+     
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
